@@ -1,17 +1,49 @@
-class Hello {
-
+public class Hello {
     public static void main(String[] args) {
-        System.out.println("Hello to the world of Java!!");
-        printHello();
+        int sales = 15000;
+
+        // Conditional Statement
+        if (sales > 10000) {
+            System.out.println("Good Sales");
+        } else {
+            System.out.println("Bad Sales");
+        }
+
+        greet("Mohammed, Shawoor, Arshad, Imran, Abdul Wahab");
+
+        int sum = add(10, 20);
+        System.out.println(sum);
+
+        printNumbers(30, 40);
+        printTable(5, 100);
+        printTable(12, 10);
+
+        System.out.println("Back to main");
     }
 
-    public static void printHello() {
-        System.out.println("Hello from Aeraf..");
-        printDate();
+    public static void greet(String name) {
+        System.out.println("As salam alaykum " + name + "!");
+        System.out.println("Today is a wonderful day with pleasant atmosphere!");
     }
 
-    public static void printDate() {
-        System.out.println("Today is Monday 08th April 2025..");
+    public static int add(int m, int n) {
+        int sum = m + n;
+        return sum;
+    }
+
+    public static void printNumbers(int start, int end) {
+        for (int i = start; i <= end; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public static void printTable(int n, int till) {
+        System.out.println("***** Printing Table of " + n + " ******");
+        for (int i = 1; i <= till; i++) {
+            System.out.printf("%d x %d = %d", n, i, n * i);
+            System.out.println();
+        }
+        System.out.println();
     }
 
 }
