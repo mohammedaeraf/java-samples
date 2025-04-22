@@ -1,7 +1,6 @@
 public class PersonDemo {
 
     public static void main(String[] args) {
-        int x;
         Person person1 = new Person("John", 25);
         person1.displayInfo();
 
