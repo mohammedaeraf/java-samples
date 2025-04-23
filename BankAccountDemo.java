@@ -1,8 +1,12 @@
 public class BankAccountDemo {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount(41029, "Johb", 12000);
-        account.deposit(5000.50f);
-        account.withdraw(8000.75f);
+        BankAccount account1 = new BankAccount(41029, "John", 12000);
+        account1.deposit(5000.50f);
+        account1.withdraw(8000.75f);
+
+        BankAccount account2 = new BankAccount(41030, "Nadeem", 400000);
+        account2.deposit(500000.00f);
+        account2.withdraw(8000.75f);
 
     }
 }
@@ -19,6 +23,7 @@ class BankAccount {
         this.balance = bal;
     }
 
+    // non-static = belonging to object
     void deposit(float amount) {
         if (amount < 0) {
             System.out.println("Sorry, amount cannot be negative");
