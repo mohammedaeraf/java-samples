@@ -5,15 +5,16 @@
 // 4. Non-Static - belongs to the object
 // 5. Constructor - it initializes the object
 
-// 6. Encapsulation 
+// 4 Pillars
+// 1. Encapsulation 
 // a. Wrapping up of data (properties) and function in a class
 // b. Controlled modification from outside by
 //         - declaring properties as private
 //         - definiting get and set methods
 
-// 7. Inheritance
-// 8. Abstraction
-// 9. Polymorphism
+// 2. Inheritance ==> Allows you to extend the behaviour of existing class
+// 3. Abstraction
+// 4. Polymorphism ==> Multiple forms
 
 public class EncapsulationDemo {
 
@@ -48,8 +49,16 @@ class Person {
     }
 
     void setName(String n) {
-        // HW: Add a check to allow only alphabets and space
-        this.name = n;
+
+        String trimmedName = n.trim();
+
+        boolean isNameValid = trimmedName.matches("^[A-Za-z ]+$");
+
+        if (isNameValid == true) {
+            this.name = n;
+        } else {
+            System.out.println(n + " is not a valid name");
+        }
     }
 
     int getAge() {
