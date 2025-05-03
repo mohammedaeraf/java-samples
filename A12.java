@@ -1,28 +1,31 @@
 interface Shape {
     double getArea();
+
     double getPerimeter();
 }
 
-class Circle {
+class Circle implements Shape {
     double radius;
 
     Circle(double radius) {
         this.radius = radius;
     }
 
-    double getArea() {
+    @Override
+    public double getArea() {
         double PI = 3.142;
         return PI * this.radius * this.radius;
     }
 
-    double getPerimeter() {
+    @Override
+    public double getPerimeter() {
         double PI = 3.142;
         return 2 * PI * this.radius;
     }
 
 }
 
-class Rectangle {
+class Rectangle implements Shape {
     double length;
     double width;
 
@@ -31,11 +34,13 @@ class Rectangle {
         this.width = width;
     }
 
-    double getArea() {
+    @Override
+    public double getArea() {
         return this.length * this.width;
     }
 
-    double getPerimeter() {
+    @Override
+    public double getPerimeter() {
         return 2 * (this.length + this.width);
     }
 
@@ -43,7 +48,7 @@ class Rectangle {
 
 public class A12 {
     public static void main(String[] args) {
-        Circle circle = new Circle(10);
+        Shape circle = new Circle(10);
         circle.getArea();
 
         double circleArea = circle.getArea();
