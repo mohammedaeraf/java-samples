@@ -16,6 +16,5 @@ public class Invoice {
         System.out.println("Customer Name " + this.customerName);
         System.out.println("Amount " + this.amount);
         System.out.println("Payment " + this.payment);
-
     }
 }

@@ -15,5 +15,6 @@ public class Ternary {
         String result = (age >= 18) ? "Eligible" : "Not Eligible";
         System.out.println(name + ", you are " + result);
 
+        scanner.close();
     }
 }
