@@ -13,16 +13,17 @@ public class ArrayListDemo {
         // System.out.println(courseContains);
         courses.add(1, "Programming in C");
         courses.set(1, "C Programming");
-        // courses.remove(0);
+        courses.removeLast();
 
         // for each loop
         for (String course : courses) {
             System.out.println(course);
         }
 
-        courses.clear();
+        Collections.sort(courses);
 
-        System.out.println("Printing after clear..");
+        System.out.println();
+        System.out.println("Printing after sorting..");
         for (String course : courses) {
             System.out.println(course);
         }
