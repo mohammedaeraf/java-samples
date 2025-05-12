@@ -13,7 +13,7 @@ public class ArrayListDemo {
         // System.out.println(courseContains);
         courses.add(1, "Programming in C");
         courses.set(1, "C Programming");
-        courses.removeLast();
+        courses.remove(3);
 
         // for each loop
         for (String course : courses) {

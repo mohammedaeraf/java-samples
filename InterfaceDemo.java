@@ -7,9 +7,11 @@ interface Animal {
 
 // Dog implements the Animal interface
 class Dog implements Animal {
+    @Override
     public void makeSound() {
         System.out.println("Dog barks: Woof! Woof!");
     }
+    @Override
     public void eat() {
         System.out.println("Dog eats bones.");
     }
